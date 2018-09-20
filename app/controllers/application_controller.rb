@@ -15,7 +15,6 @@ class ApplicationController < Sinatra::Base
       #saved as user_id here so need to call like that
       #but need to do find_by(id: session[:user_id]) b/c sql creates id
       session[:user_id] = @user.id
-      binding.pry
       redirect to '/account'
     else
       erb :error
