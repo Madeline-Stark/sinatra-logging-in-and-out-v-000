@@ -3,10 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
+  <%if @user.is_logged_in?(session)<%>
+    <%=@user.username%>
+    <%=@user.balance%>
+  <%else%>
+    <a href="/">Home</a>
+  <%end%>
   <body id="page-top">
-    
-
+    <a href="/logout">Log Out</a>
   </body>
 </html>
