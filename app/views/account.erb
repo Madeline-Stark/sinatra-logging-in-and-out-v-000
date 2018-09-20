@@ -5,7 +5,7 @@
     <title>title</title>
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
-  <%if @user.is_logged_in?(session)<%>
+  <%if @user.is_logged_in?(session)%>
     <%=@user.username%>
     <%=@user.balance%>
   <%else%>
